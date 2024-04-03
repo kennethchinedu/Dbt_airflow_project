@@ -11,8 +11,8 @@ profile_config = ProfileConfig(profile_name="admin",
                                profile_mapping=SnowflakeUserPasswordProfileMapping(conn_id="snowflake_con", 
                                                     profile_args={
                                                         "database": "project",
-                                                        "schema": "olist_analytic"
-                                                        },
+                                                        "schema": "olist_analytic" 
+                                                    },
                                                     ))
 
 
