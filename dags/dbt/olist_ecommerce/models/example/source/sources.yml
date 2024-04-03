@@ -6,4 +6,5 @@ sources:
     schema: olist_raw
     tables:
       - name: customers
+      - name: geolocation
    
