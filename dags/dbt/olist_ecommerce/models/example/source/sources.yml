@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: olist
+    database: dbt_project
+    schema: olist_raw
+    tables:
+      - name: customers
+   
