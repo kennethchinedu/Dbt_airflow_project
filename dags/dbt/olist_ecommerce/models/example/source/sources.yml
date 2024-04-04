@@ -2,9 +2,15 @@ version: 2
 
 sources:
   - name: olist
-    database: dbt_project
-    schema: olist_raw
+    database: DBT_PROJECT
+    schema: OLIST_RAW
     tables:
       - name: customers
       - name: geolocation
       - name: orders
+      - name: order_items
+      - name: order_payment
+      - name: products
+      - name: product_cat
+      - name: sellers
+      - name: order_review
