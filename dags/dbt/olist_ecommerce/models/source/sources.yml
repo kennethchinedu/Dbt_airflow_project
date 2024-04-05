@@ -14,3 +14,24 @@ sources:
       - name: product_cat
       - name: sellers
       - name: order_review
+
+models:
+  - name: src_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - accepted_values:
+              values:
+                - delivered
+                - invoiced
+                - completed
+
+  - name: src_order_items
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+
+
