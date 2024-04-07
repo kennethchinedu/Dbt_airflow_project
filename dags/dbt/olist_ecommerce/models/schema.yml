@@ -1,21 +1,23 @@
-
 version: 2
 
+# Adding tests
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: stg_orders
+    description: "A staging model for orders"
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: order_id
+        description: "The primary key for order id"
         tests:
           - unique
-          - not_null
+          - relationships:
+              field: order_id
+              to: ref('stg_order_items')
+      - name: order_purchase_timestamp
+        tests:
+          - assert_timestamp_is_past
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  - name: stg_order_items
+    description: "A staging model for order_items"
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "freight_value < 25"
