@@ -1,8 +1,13 @@
-
-select
+WITH geolocation AS (
+    select
     *
-from
-{{ source('olist', 'geolocation') }}
+    from
+    {{ source('olist', 'geolocation') }}
+)
+
+SELECT
+   * 
+FROM geolocation
 
 
 
