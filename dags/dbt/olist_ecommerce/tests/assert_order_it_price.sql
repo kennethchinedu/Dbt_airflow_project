@@ -1,4 +1,5 @@
 -- ensuring that all price in order item is positive
+-- This is a custom test for the source order table
 
 with 
     order_item as (
@@ -10,3 +11,5 @@ select
     price
 from order_item
 having price < 0
+
+

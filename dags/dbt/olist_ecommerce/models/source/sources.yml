@@ -21,11 +21,11 @@ models:
       - name: order_id
         tests:
           - unique
-          - accepted_values:
-              values:
-                - delivered
-                - invoiced
-                - completed
+          - not_null
+        config:
+          store_failures: true
+
+
 
   - name: src_order_items
     columns:
