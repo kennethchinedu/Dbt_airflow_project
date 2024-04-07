@@ -40,6 +40,6 @@ select
         WHEN EXTRACT(MONTH FROM order_delivered_customer_date) = 12 THEN 'December'
     END AS order_delivered_month,
     DAYNAME(order_delivered_customer_date) AS order_delivered_day,
-    order_estimated_delivery_date
+    
 
 FROM orders
