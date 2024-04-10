@@ -11,7 +11,7 @@ SELECT
     order_item_id,
     product_id,
     seller_id,
-    TO_TIMESTAMP(shipping_limit_date, 'DD/MM/YYYY HH24:MI') AS shipping_limit_date,
+    TO_TIMESTAMP(shipping_limit_date, 'MM/DD/YYYY HH24:MI:SS.FF') AS shipping_limit_date,
     price,
     freight_value
 FROM 
