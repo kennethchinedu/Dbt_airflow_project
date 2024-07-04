@@ -47,7 +47,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Pull Docker image
-        run: docker pull anamskenneth/dbt_project:latest
+        run: docker pull anamskenneth/dbt_project:main
       
       - name: Run Docker image
-        run: docker run -d --name dbt_project_container anamskenneth/dbt_project:latest
+        run: docker run -d --name dbt_project_container anamskenneth/dbt_project:main
